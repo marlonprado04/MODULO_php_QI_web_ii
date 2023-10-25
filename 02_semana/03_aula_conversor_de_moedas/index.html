@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+</head>
+
+<body>
+    <!-- Adicionando o conteúdo principal -->
+    <main>
+        <!-- Adicionando formulário que redireciona para arquivo PHP -->
+        <form action="convert.php" method="POST">
+            <!-- Adicionando label para moeda -->
+            <label for="money">R$</label>
+
+            <!-- Adicionando input de texto (para o caso de vírgula) -->
+
+            <!-- Estipulamos um padrão regex para que respeite o padrão de dígitos, sem texto -->
+            <input 
+            type="text" 
+            pattern="^\d*[0-9](.\d*[0-9])?$"  
+            id="money" 
+            name="money"
+            required>
+
+            <!-- Adicionando select para selecionar a moeda -->
+            <select name="coin" id="coin">
+                <option value="dollar">Dólar</option>
+                <option value="euro">Euro</option>
+            </select>
+
+        <button type="submit">Converter</button>            
+
+        </form>
+
+
+    </main>
+</body>
+
+</html>
