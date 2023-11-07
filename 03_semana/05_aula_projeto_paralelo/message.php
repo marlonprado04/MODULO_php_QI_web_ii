@@ -36,6 +36,20 @@
   endif;
   ?>
 
+  <?php
+  // Verificando se mensagem de erro não está vazia
+  if (!$_SESSION["msg_warning"]):
+  ?>
+
+  <div class="alert alert-warning">
+    <p> <?= $_SESSION["msg_warning"]?></p>
+  </div>
+
+  <?php
+  unset($_SESSION["msg_warning"]);
+  endif;
+  ?>
+
 </body>
 
 </html>
